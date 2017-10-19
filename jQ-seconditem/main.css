@@ -1,0 +1,120 @@
+*{
+	box-sizing: border-box;
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	color: #666;
+	text-decoration: none;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+.mod-tab {
+	position: relative;
+	margin: 10px;
+}
+.mod-tab .tabs{
+	float: left;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	border-radius: 3px 3px 0 0;
+}
+.mod-tab .tabs li{
+	float: left;
+	padding: 8px 0;
+}
+.mod-tab .tabs li a{
+	padding: 0 10px;
+	border-right: 1px solid #ccc;
+	line-height: 1;
+}
+.mod-tab .tabs li:last-child a{
+	border: none;
+}
+.mod-tab .tabs li.active{
+	background: #ccc;
+}
+.mod-tab .tabs li.active a{
+	color: #c81623;
+}
+.mod-tab .panel-ct{
+	border: 1px solid #ccc;
+	width: 702px;
+}
+.mod-tab .panel{
+	display: none;
+}
+.mod-tab .panel.active{
+	display: block;
+}
+.mod-tab .pord{
+	position: relative;
+	float: left;
+	width: 220px;
+	padding: 10px 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	text-align: center;
+	border: 1px solid #eee;
+	background: #fff;
+}
+.mod-tab .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,.3);
+	transition: all .3s;
+	opacity: 0;
+}
+.mod-tab .cover .btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 1px solid #c81623;
+	color: #c81623;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background: #fff;
+	cursor: pointer;
+}
+.mod-tab .pord.hover .cover{
+  opacity: 1;
+}
+.mod-tab .pord-ct{
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.mod-tab .pord-name{
+  height: 36px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 12px;
+  color: #666;
+}
+.mod-tab .pord-price{
+  text-align: left;
+  color: #c81623;
+}
+
+
+
+
+
+
+
+
+
+
+

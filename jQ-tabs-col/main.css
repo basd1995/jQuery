@@ -1,0 +1,61 @@
+.mod-tabs>* {
+	box-sizing: border-box;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+ul,
+li {
+	padding: 0;
+	margin: 0;
+}
+.mod-tabs {
+	width: 600px;
+	margin: 0 auto;
+}
+.mod-tabs .tabs>li {
+	width: 33.1%;
+	float: left;
+	list-style: none;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-right: none;
+}
+.mod-tabs .tabs .active {
+	background: #eee;
+}
+.mod-tabs .tabs>li:last-child {
+	border-right: 1px solid #ccc;
+}
+.mod-tabs .wrap {
+	position: relative;
+	height: 180px;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.mod-tabs .wrap .panels {
+	position: absolute;
+	top: -0px;
+	width: 600px;
+}
+.mod-tabs .wrap .panels>li {
+	list-style: none;
+	height: 180px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.mod-tabs .wrap .panels>.active {
+	display: block;
+}
+.mod-tabs .panels>li:nth-child(1) {
+	background-color: red;
+}
+.mod-tabs .panels>li:nth-child(2) {
+	background-color: green;
+}
+.mod-tabs .panels>li:nth-child(3) {
+	background-color: blue;
+}
+.mod-tabs .panels {}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div class="mod-tab">
+		<h1>珠宝首饰</h1>
+		<ul class="pord-ct clearfix">
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">藏美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">藏美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">藏美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">藏美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			<li class="pord">
+				<div class="cover"><a class="btn" href="">立即抢购</a></div>
+				<a href="#">
+					<img src="http://img10.360buyimg.com/N3/jfs/t1360/330/897475737/123557/23624706/55b05e25N13d4ec5e.jpg" alt="">
+					<div class="pord-name">藏美千足金和田玉金镶玉路路通吊坠</div>
+					<div class="pord-price">￥1699.00</div>
+				</a>
+			</li>
+			
+		</ul>
+		<a class="btn-add" href="">更多</a>
+	</div>
+</body>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+<script>
+	$(function() {
+		var products = [{
+			img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+			name: '珂兰 黄金手 猴哥款',
+			price: '￥405.00'
+		}, {
+			img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+			name: '珂兰 黄金转运珠 猴哥款',
+			price: '￥100.00'
+		}, {
+			img: 'http://img10.360buyimg.com/N3/jfs/t2242/92/1446546284/374195/9196ac66/56af0958N1a723458.jpg',
+			name: '珂兰 黄金手链 3D猴哥款',
+			price: '￥45.00'
+		}]
+
+
+		function getProducts(pord) {
+			var html = ''
+			html += '<li class="pord">'
+			html += '<div class="cover"><a class="btn" href="">立即抢购</a></div>'
+			html += '<a href="#">'
+			html += '<img src="' + pord.img + '" alt="">'
+			html += '<div class="pord-name">' + pord.name + '</div>'
+			html += '<div class="pord-price">' + pord.price + '</div>'
+			html += '</a>'
+			html += '</li>'
+
+			return html
+		}
+
+		$('.btn-add').on('click', function(e) {
+			console.log('click')
+			e.preventDefault();
+			$.each(products, function(idx, pord) {
+				var html = getProducts(pord);
+				$('.pord-ct').append(html);
+			})
+		})
+
+		$('.pord-ct').on('mouseenter', '.pord', function() {
+			$(this).addClass('hover')
+		})
+		$('.pord-ct').on('mouseleave', '.pord', function() {
+			$(this).removeClass('hover')
+		})
+
+	})
+
+</script>
+
+</html>
